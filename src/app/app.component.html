@@ -8,41 +8,28 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <svg id="page-logo" xmlns="http://www.w3.org/2000/svg" height="30px" width="60px" viewBox="2 2 20 20"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M13.35 20.13c-.76.69-1.93.69-2.69-.01l-.11-.1C5.3 15.27 1.87 12.16 2 8.28c.06-1.7.93-3.33 2.34-4.29 2.64-1.8 5.9-.96 7.66 1.1 1.76-2.06 5.02-2.91 7.66-1.1 1.41.96 2.28 2.59 2.34 4.29.14 3.88-3.3 6.99-8.55 11.76l-.1.09z" fill="red"></path></svg>
-  <span>Welcome</span>
-  <div class="spacer"></div> 
-</div>
+
 <app-responsive-toolbar></app-responsive-toolbar>
-<div class="content" role="main">
+<button mat-icon-button color="primary" (click)="sidenav.toggle()" style="position: fixed;top: 75px; left:-5px; z-index:1000">
+  <mat-icon *ngIf="!sidenav.opened">
+    arrow_forward_ios
+  </mat-icon>
+  <mat-icon *ngIf="sidenav.opened">
+    arrow_back_ios
+  </mat-icon>
+</button>
+<mat-sidenav-container >
+  <mat-sidenav mode="side" hasBackdrop="false" #sidenav="matSidenav" class="mat-elevation-z8">
+    Side Nav
 
-  
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8" role="main">
+      Main Content
 
-  
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
-  <!-- Footer -->
-  <footer>
-      Love Angular?&nbsp;
-      <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.
-        <div class="github-star-badge">
-            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          Star
-        </div>
-      </a>
-      <a href="https://github.com/angular/angular" target="_blank" rel="noopener">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-      </a>
-  </footer>
-
-</div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>

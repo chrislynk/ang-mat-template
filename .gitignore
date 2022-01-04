@@ -44,3 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+*.sqlite
+.vs/ang-mat-template/v15/.suo
+.vs/slnx.sqlite
+.vs/slnx.sqlite
+.vs/ang-mat-template/v15/.suo
