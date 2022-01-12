@@ -8,11 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ResponsiveToolbarComponent } from './_navbar/responsive-toolbar.component';
+
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ResponsiveToolbarComponent } from './_navbar/responsive-toolbar.compone
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule
   ],
   providers: [
     Title

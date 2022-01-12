@@ -1,0 +1,30 @@
+@import "../../variables.scss";
+
+
+svg>path {
+
+    &[fill=primary]{
+    fill: $primary;
+  }
+
+  &[fill=accent] {
+    fill: $accent;
+  }
+
+  &[fill=warn] {
+    fill: $warn;
+  }
+}
+svg.alt-theme > path {
+  &[fill=primary]{
+    fill: $alt_pri;
+  }
+
+  &[fill=accent] {
+    fill: $alt_acc;
+  }
+
+  &[fill=warn] {
+    fill: $warn;
+  }
+}

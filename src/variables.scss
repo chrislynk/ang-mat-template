@@ -1,0 +1,22 @@
+@import "theme.scss";
+
+$primary: mat-color($my-app-primary);
+$accent: mat-color($my-app-accent);
+$warn: mat-color($my-app-warn);
+
+$pri_fore: mat-color($my-app-primary, lighter);
+$pri_back: mat-color($my-app-primary, darker);
+$acc_fore: mat-color($my-app-accent, lighter);
+$acc_back: mat-color($my-app-accent, darker);
+$warn_fore: mat-color($my-app-warn, lighter);
+$warn_back: mat-color($my-app-warn, darker);
+
+$alt_pri: mat-color($alt-primary);
+$alt_acc: mat-color($alt-accent);
+
+$alt_pri_fore: mat-color($alt-primary, lighter);
+$alt_pri_back: mat-color($alt-primary, darker);
+$alt_acc_fore: mat-color($alt-accent, lighter);
+$alt_acc_back: mat-color($alt-accent, darker);
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
