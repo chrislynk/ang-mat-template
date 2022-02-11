@@ -1,32 +1,32 @@
 <mat-toolbar fxLayout="row" color="primary">
-    <svg id="page-logo" class="alt-theme" xmlns="http://www.w3.org/2000/svg" height="30px" width="60px" viewBox="2 2 20 20"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M13.35 20.13c-.76.69-1.93.69-2.69-.01l-.11-.1C5.3 15.27 1.87 12.16 2 8.28c.06-1.7.93-3.33 2.34-4.29 2.64-1.8 5.9-.96 7.66 1.1 1.76-2.06 5.02-2.91 7.66-1.1 1.41.96 2.28 2.59 2.34 4.29.14 3.88-3.3 6.99-8.55 11.76l-.1.09z" fill="primary"></path></svg>
-   
-    <div class="spacer"></div>
+  <svg id="page-logo" class="alt-theme" xmlns="http://www.w3.org/2000/svg" height="30px" width="60px" viewBox="2 2 20 20"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M13.35 20.13c-.76.69-1.93.69-2.69-.01l-.11-.1C5.3 15.27 1.87 12.16 2 8.28c.06-1.7.93-3.33 2.34-4.29 2.64-1.8 5.9-.96 7.66 1.1 1.76-2.06 5.02-2.91 7.66-1.1 1.41.96 2.28 2.59 2.34 4.29.14 3.88-3.3 6.99-8.55 11.76l-.1.09z" fill="primary"></path></svg>
 
-    <span fxFlex>Welcome</span>
-    <button mat-button *ngFor="let item of menuItems"  
-        [fxShow]="item.show && item.showOnDesktop" 
-        [fxShow.xs]="item.show && item.showOnMobile"
-        [fxShow.sm]="item.show && item.showOnTablet" [fxHide]="!item.show" >
-        <mat-icon class="mr">{{item.icon}}</mat-icon>
-        {{item.label}}
+  <div class="spacer"></div>
+
+  <span fxFlex>Welcome</span>
+  <button mat-button *ngFor="let item of menuItems"
+          [fxShow]="item.show && item.showOnDesktop"
+          [fxShow.xs]="item.show && item.showOnMobile"
+          [fxShow.sm]="item.show && item.showOnTablet" [fxHide]="!item.show">
+    <mat-icon class="mr">{{item.icon}}</mat-icon>
+    {{item.label}}
+  </button>
+  <ng-container>
+    <button mat-icon-button [matMenuTriggerFor]="dropMenu">
+      <mat-icon>more_vert</mat-icon>
     </button>
-    <ng-container>
-        <button mat-icon-button [matMenuTriggerFor]="dropMenu">
-            <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #dropMenu="matMenu">
-            <ng-container *ngFor="let item of menuItems">
-                <div [fxShow]="item.show && !item.showOnDesktop" 
-                     [fxShow.sm]="item.show && !item.showOnTablet" 
-                     [fxShow.xs]="item.show && !item.showOnMobile" >
-                    <button mat-menu-item>
-                        <mat-icon class="mr">{{item.icon}}</mat-icon>
-                        {{item.label}}
-                    </button>
-                    <mat-divider></mat-divider>
-                </div>
-            </ng-container>
-        </mat-menu>
-    </ng-container>
+    <mat-menu #dropMenu="matMenu">
+      <ng-container *ngFor="let item of menuItems">
+        <div [fxShow]="item.show && !item.showOnDesktop"
+             [fxShow.sm]="item.show && !item.showOnTablet"
+             [fxShow.xs]="item.show && !item.showOnMobile">
+          <button mat-menu-item>
+            <mat-icon class="mr">{{item.icon}}</mat-icon>
+            {{item.label}}
+          </button>
+          <mat-divider></mat-divider>
+        </div>
+      </ng-container>
+    </mat-menu>
+  </ng-container>
 </mat-toolbar>

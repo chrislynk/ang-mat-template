@@ -2,29 +2,18 @@
 
 
 svg>path {
-
-    &[fill=primary]{
-    fill: $primary;
-  }
-
-  &[fill=accent] {
-    fill: $accent;
-  }
-
-  &[fill=warn] {
-    fill: $warn;
-  }
+  &[fill=primary]{ fill: $primary; }
+  &[fill=accent] { fill: $accent; }
+  &[fill=warn] { fill: $warn; }
+  &[stroke=primary] { stroke: $primary; }
+  &[stroke=accent] { stroke: $accent; }
+  &[fill=warn] { stroke: $warn; }
 }
 svg.alt-theme > path {
-  &[fill=primary]{
-    fill: $alt_pri;
-  }
-
-  &[fill=accent] {
-    fill: $alt_acc;
-  }
-
-  &[fill=warn] {
-    fill: $warn;
-  }
+  &[fill=primary]{ fill: $alt_pri; }
+  &[fill=accent] { fill: $alt_acc; }
+  &[fill=warn] { fill: $warn; }
+  &[stroke=primary] { stroke: $alt_pri; }
+  &[stroke=accent] { stroke: $alt_acc; }
+  &[stroke=warn] { stroke: $warn; }
 }
