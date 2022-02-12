@@ -9,15 +9,29 @@
 </button>
 <mat-sidenav-container>
   <mat-sidenav mode="side" hasBackdrop="false" #sidenav="matSidenav" class="alt-theme" color="primary">
+    <scrollbar class="scrollbar">
     Side Nav
-
+  </scrollbar>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="content mat-elevation-z8" role="main">
+    <div class="content" role="main">
+      <scrollbar class="scrollbar">
 
       <div>
         <mat-card>
-          Main Theme:
+          <h1>Basic Responsive Toolbar</h1>
+          <p>This basic version uses an icon and a label displayed across the top or behind a drop down. see: <a href="https://zoaibkhan.com/blog/create-a-responsive-toolbar-in-angular-using-flex-layout/">Responsive NavBar using Flex Layout</a>.</p>
+          <h2>Interface</h2>
+          <p>It is best practice to define types with typescript. Additionally add some booleans to specify to show the item on top or not for various platforms using <a href="https://github.com/angular/flex-layout/wiki/fxShow-API">fxShow</a>.</p>
+        </mat-card>
+        <mat-card>
+          <h1>Basic Responsive Sidebar</h1>
+          <p>Sidebar navigation menus are the most common layout pattern used by web apps. see: <a href="">https://zoaibkhan.com/blog/create-a-responsive-sidebar-menu-with-angular-material/</a>.</p>
+          <img src="../assets/sideNav_layout.png" />
+        </mat-card>
+        <mat-card>
+          <h1>Custom Theme</h1>
+          <h2>Main Theme</h2>
           <button mat-raised-button color="primary">
             Primary
           </button>
@@ -30,7 +44,7 @@
         </mat-card>
 
         <mat-card class="alt-theme">
-          Alternate Theme:
+          <h2>Alternate Theme</h2>
           <button mat-raised-button color="primary">
             Primary
           </button>
@@ -41,8 +55,39 @@
             Warning
           </button>
         </mat-card>
-      </div>
+        <mat-card>
+          <h1>Scrollbar</h1>
+<p>
+  <a href="https://medium.com/its-tinkoff/custom-scrollbar-in-angular-93e23d47bf62">Custom Scrollbar in Angular</a>
+</p>
+<p>
+  <a href="https://stackblitz.com/edit/angular-scrollbar-component-directive?file=src%2Fapp%2Fscrollbar%2Fscrollbar.component.ts">StackBlitz</a>
+</p>
+<h2>Scrollbar Component</h2>
 
+<ul>
+  <li>
+    <strong>scrollbar.component.html</strong>: Surrounds content (&lt;ng-content&gt;) with scroll elements (bar and thumb), and event handlers (dragged - see draggable) for vertical and horizontal scrolling.
+  </li>
+  <li>
+    <strong>scrollbar.component.ts</strong>: Contains position calculation functions and  for scroll elements.</li>
+  <li>
+    <strong>draggable.directive.ts</strong>: Contains the logic for a behavior directed reusable component, dragging the scroll bar's thumb (mouse move, up, down).</li>
+  <li>
+    <strong>scrollbar.component.scss</strong>: Style for scrollbar elements. Includes variables. </li>
+  <li>
+    <strong>scrollbar.module.ts</strong>: Organizes the required components (scrollbar -req:resize-obzerver, and draggable) into a module.</li>
+</ul>
+
+<h3>Install dependencies</h3>
+<ul>
+  <li>npm i @ng-web-apis/common</li>
+  <li>npm i @ng-web-apis/resize-observer</li>
+  <li>npm install --save @types/resize-observer-browser</li>
+</ul>
+        </mat-card>
+      </div>
+    </scrollbar>
 
     </div>
   </mat-sidenav-content>

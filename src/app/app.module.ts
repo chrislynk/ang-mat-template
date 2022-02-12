@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ResponsiveToolbarComponent } from './_navbar/responsive-toolbar.component';
+import { ScrollbarModule } from './_scrollbar/scrollbar.module';
 
 import { MatCardModule } from '@angular/material/card';
 
@@ -26,6 +27,7 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    ScrollbarModule,
     MatMenuModule,
     MatToolbarModule,
     MatSidenavModule,

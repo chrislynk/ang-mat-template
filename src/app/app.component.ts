@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewChecked } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 
@@ -10,7 +9,12 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements AfterViewChecked {
+  
+  ngAfterViewChecked() {
+    console.log('Change detection cycle');
+  }
+
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
   title = 'ang-mat-template';

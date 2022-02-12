@@ -18,10 +18,9 @@ h4,
 h5,
 h6 {
   margin: 8px 0;
-}
-
-p {
+}p, li {
   margin: 0;
+  font-size:medium;
 }
 
 a,
@@ -296,6 +295,21 @@ footer a {
   align-items: center;
 }
 
+.scrollbar {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.horizontal p {
+  width: 1200px;
+}
+
+
+.both p {
+  width: 500px;
+}
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
