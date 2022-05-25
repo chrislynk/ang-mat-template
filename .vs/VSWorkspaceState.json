@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\_navbar"
+    "\\src\\app\\__test",
+    "\\src\\app\\__test\\log-test"
   ],
-  "SelectedNode": "\\src\\app\\_navbar\\responsive-toolbar.component.scss",
+  "SelectedNode": "\\src\\app\\app.component.scss",
   "PreviewInSolutionExplorer": false
 }

@@ -7,6 +7,7 @@
     arrow_back_ios
   </mat-icon>
 </button>
+
 <mat-sidenav-container>
   <mat-sidenav mode="side" hasBackdrop="false" #sidenav="matSidenav" class="alt-theme" color="primary">
     <scrollbar class="scrollbar">
@@ -16,21 +17,27 @@
   <mat-sidenav-content>
     <div class="content" role="main">
       <scrollbar class="scrollbar">
-
       <div>
         <mat-card>
-          <h1>Basic Responsive Toolbar</h1>
-          <p>This basic version uses an icon and a label displayed across the top or behind a drop down. see: <a href="https://zoaibkhan.com/blog/create-a-responsive-toolbar-in-angular-using-flex-layout/">Responsive NavBar using Flex Layout</a>.</p>
-          <h2>Interface</h2>
-          <p>It is best practice to define types with typescript. Additionally add some booleans to specify to show the item on top or not for various platforms using <a href="https://github.com/angular/flex-layout/wiki/fxShow-API">fxShow</a>.</p>
+          <log-test></log-test>
         </mat-card>
         <mat-card>
-          <h1>Basic Responsive Sidebar</h1>
+          <mat-card-header>
+            <mat-card-title>Basic Responsive Toolbar</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>This basic version uses an icon and a label displayed across the top or behind a drop down. see: <a href="https://zoaibkhan.com/blog/create-a-responsive-toolbar-in-angular-using-flex-layout/">Responsive NavBar using Flex Layout</a>.</p>
+            <h2>Interface</h2>
+            <p>It is best practice to define types with typescript. Additionally add some booleans to specify to show the item on top or not for various platforms using <a href="https://github.com/angular/flex-layout/wiki/fxShow-API">fxShow</a>.</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card>
+          <mat-card-title>Basic Responsive Sidebar</mat-card-title>
           <p>Sidebar navigation menus are the most common layout pattern used by web apps. see: <a href="">https://zoaibkhan.com/blog/create-a-responsive-sidebar-menu-with-angular-material/</a>.</p>
-          <img src="../assets/sideNav_layout.png" />
+          <img src="../assets/sideNav_Layout.png" />
         </mat-card>
         <mat-card>
-          <h1>Custom Theme</h1>
+          <mat-card-title>Custom Theme</mat-card-title>
           <h2>Main Theme</h2>
           <button mat-raised-button color="primary">
             Primary
@@ -56,7 +63,7 @@
           </button>
         </mat-card>
         <mat-card>
-          <h1>Scrollbar</h1>
+          <mat-card-title>Scrollbar</mat-card-title>
 <p>
   <a href="https://medium.com/its-tinkoff/custom-scrollbar-in-angular-93e23d47bf62">Custom Scrollbar in Angular</a>
 </p>

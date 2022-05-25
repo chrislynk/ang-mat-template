@@ -17,10 +17,14 @@ import { ScrollbarModule } from './_scrollbar/scrollbar.module';
 
 import { MatCardModule } from '@angular/material/card';
 
+import { LogService } from './_logging/log.service';
+import { LogTestComponent } from './__test/log-test/log-test.component'
+
 @NgModule({
   declarations: [
     AppComponent,
-    ResponsiveToolbarComponent
+    ResponsiveToolbarComponent,
+    LogTestComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule
   ],
   providers: [
-    Title
+    Title,
+    LogService
   ],
   bootstrap: [AppComponent]
 })

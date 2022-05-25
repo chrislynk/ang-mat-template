@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from '../menu-item'
+import { MenuItem } from './menu-item'
 
 @Component({
   selector: 'app-responsive-toolbar',
